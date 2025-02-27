@@ -68,7 +68,7 @@ a {
 .hero-rhs {
     justify-content: center;
     align-items: center;
-    background-color: grey;
+    /* background-color: grey; */
 }
 
 .hero-main {
@@ -83,4 +83,29 @@ a {
     padding: 8px 32px;
     font-weight: 800;
     border-radius: 5px;
+}
+
+.hero-img {
+    max-height: 220px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 125px;
+    color: #1F2937;
+    align-items: center;
+}
+
+.info-header {
+    font-size: 36px;
+    font-weight: 900;
+    padding-top: 30px;
+}
+
+.info-image-box {
+    display: flex;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: #3882F6;
 }
