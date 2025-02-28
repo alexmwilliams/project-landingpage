@@ -86,7 +86,9 @@ a {
 }
 
 .hero-img {
-    max-height: 220px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
 }
 
 .info-section {
