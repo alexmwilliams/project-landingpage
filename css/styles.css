@@ -11,21 +11,20 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 125px;
+    padding: 10px 50px;
     background-color: #1F2937;
     color: #F9FAF8;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .header-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    min-width: 900px;
+    width: 100%;
     max-width: 1200px;
-    /* border-style: solid; */
-    /* border-color: bisque; */
+    margin: 0 auto;
 }
 
 .logo {
@@ -60,11 +59,13 @@ a {
 
 .hero-section {
     display: flex;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 100px;
     justify-content: space-between;
-    min-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 60px;
     max-width: 1200px;
+    box-sizing: border-box;
     /* border-style: solid; */
     /* border-color: aquamarine; */
 }
@@ -107,27 +108,33 @@ a {
     width: 220px;
     height: 220px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .info-section {
     display: flex;
     flex-direction: column;
-    padding: 10px 125px;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     gap: 24px;
+    width: 100%;
     color: #1F2937;
     align-items: center;
+    text-align: center;
     /* border-style: solid; */
     /* border-color: red; */
+
 }
 
 .info-wrapper {
     display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    min-width: 900px;
+    justify-content: center;
+    gap: 48px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
     max-width: 1200px;
-    border-style: double;
+    box-sizing: border-box;
+    /* border-style: double; */
     /* border-color: brown; */
 }
 
@@ -138,7 +145,7 @@ a {
     min-width: 900px;
     max-width: 1200px;
     text-align: center;
-    border-style: solid;
+    /* border-style: solid; */
 }
 
 .info-image-box {
@@ -156,6 +163,7 @@ a {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 20px;
     /* border-style: solid; */
 }
 
@@ -167,23 +175,151 @@ a {
 .quote-section {
     display: flex;
     flex-direction: column;
-    padding: 100px 125px;
+    padding: 80px 0;
     gap: 24px;
     background-color: #E5E7EB;
     color: #1F2937;
     align-items: center;
+    width: 100%;
     /* border-style: solid; */
     /* border-color: red; */
+}
+
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    /* border-style: solid; */
 }
 
 .quote-text {
     font-size: 36px;
     font-weight: 300;
     font-style: italic;
-    min-width: 450px;
     max-width: 700px;
+    line-height: 1.4;
+    /* border-style: solid; */
 }
 
 .quote-person {
+    align-self:last baseline;
     text-align: end;
+    font-size: 20px;
+    font-weight: 700;
+    /* border-style: solid; */
+}
+
+.footer-section {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+    .info-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .info-image-box {
+        width: 100%; /* Make image boxes full width */
+        max-width: 320px; /* Limit the size of the image boxes */
+    }
+
+    .info-img {
+        height: 150px; /* Adjust the height of the images */
+    }
+
+    .info-header {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* General adjustments */
+    .dark-section, .info-section, .quote-section {
+        padding: 50px 16px;
+    }
+
+    /* Header Section */
+    .header-bar {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .header-link {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        flex-direction: column;
+        padding: 50px 16px;
+    }
+
+    .hero-lhs, .hero-rhs {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Info Section */
+    .info-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-image-box {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .info-img {
+        height: 150px;
+    }
+
+    .info-header {
+        font-size: 28px;
+    }
+
+    /* Quote Section */
+    .quote-text {
+        font-size: 28px;
+        max-width: 90%;
+    }
+
+    .quote-person {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .quote-container {
+        padding: 0 16px;
+    }
+
+    /* Sign Up Button */
+    .sign-up-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
